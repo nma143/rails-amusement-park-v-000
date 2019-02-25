@@ -7,9 +7,8 @@
 <% if current_user.admin %>
   <p><%= link_to 'Edit Attraction', [:edit, @attraction] %></p>
 <% else %>
-
-<form action="/rides/new" method="post">
-  <input type="hidden" name="attraction_id" value= <%=@attraction.id%> >
-  <input type="submit" value="Go on this ride">
-</form>
+  <form action="/rides/new" method="post">
+    <input type="hidden" name="attraction_id" value= <%=@attraction.id%> >
+    <input type="submit" value="Go on this ride">
+  </form>
 <% end %>
