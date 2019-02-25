@@ -12,4 +12,13 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.new
   end
 
+  def create
+    @attraction = Attraction.new(attraction_params)
+    if @attraction.save
+      redirect_to @attraction, notice: 'Attraction was successfully created.' }
+    else
+      render :new
+    end
+  end
+
 end
