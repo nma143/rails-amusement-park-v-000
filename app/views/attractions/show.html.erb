@@ -4,6 +4,9 @@
 <p>Nausea:<%= @attraction.nausea_rating %></p>
 <p>Height:<%= @attraction.min_height %></p>
 
+<% if current_user.admin %>
+  <%= link_to 'Edit Attraction', [:edit, @attraction] %></p>
+<% else %>
 
 <form action="/rides/new" method="post">
   <input type="hidden" name="attraction_id" value= <%=@attraction.id%> >
