@@ -2,6 +2,6 @@
   <p><%= attraction.name %> : <%= link_to "Go on #{attraction.name}", attraction_path(attraction) %> </p><br>
 <% end %>
 
-<% if @user %>
-  <p><%= link_to 'New Attraction', new_attraction_path %></p>
-<% end %>
+
+<p><%= link_to 'New Attraction', new_attraction_path %></p>
+
