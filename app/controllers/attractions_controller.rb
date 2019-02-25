@@ -28,7 +28,7 @@ class AttractionsController < ApplicationController
         :nausea_rating,
         :happiness_rating,
         :tickets,
-        :min_height    
+        :min_height
       )
     end
 end
