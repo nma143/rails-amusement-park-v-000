@@ -6,7 +6,7 @@ class RidesController < ApplicationController
     @ride.save
     @message = @ride.take_ride
     raise @message.inspect
-    redirect_to user_path(@ride.user, :message => @message)
+    redirect_to user_path(@ride.user, @message)
   end
 
 end
