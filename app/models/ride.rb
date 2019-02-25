@@ -20,7 +20,7 @@ class Ride < ActiveRecord::Base
       end
 
     else
-      "Sorry, not enough tickets"
+      "You do not have enough tickets to ride the #{self.attraction.name}"
     end
   end
 
