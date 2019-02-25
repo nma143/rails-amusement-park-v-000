@@ -15,7 +15,7 @@ class AttractionsController < ApplicationController
   def create
     @attraction = Attraction.new(attraction_params)
     if @attraction.save
-      redirect_to @attraction, notice: 'Attraction was successfully created.' }
+      redirect_to @attraction
     else
       render :new
     end
