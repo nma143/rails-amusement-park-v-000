@@ -5,7 +5,7 @@
 <p>Height:<%= @attraction.min_height %></p>
 
 <% if current_user.admin %>
-  <%= link_to 'Edit Attraction', [:edit, @attraction] %></p>
+  <p><%= link_to 'Edit Attraction', [:edit, @attraction] %></p>
 <% else %>
 
 <form action="/rides/new" method="post">
