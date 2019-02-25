@@ -3,6 +3,7 @@ class Ride < ActiveRecord::Base
   belongs_to :attraction
 
   def take_ride
+    raise self.user.inspect
     if self.user.tickets >= self.attraction.tickets #enough tickets
 
       if self.user.height >= self.attraction.min_height #tall enough
