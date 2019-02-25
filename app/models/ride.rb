@@ -14,15 +14,15 @@ class Ride < ActiveRecord::Base
           :nausea => self.user.nausea + self.attraction.nausea_rating
         )
         "Thanks for riding the #{self.attraction.name}!"
-        
+
       else
         "Sorry, not tall enough"
       end
 
     else
-      "Sorry, not enough tickets"  
+      "Sorry, not enough tickets"
     end
   end
 
-  
+
 end
