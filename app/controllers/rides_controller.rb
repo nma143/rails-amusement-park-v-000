@@ -8,7 +8,6 @@ class RidesController < ApplicationController
                           :attraction_id => params[:attraction_id]
                         )
     redirect_to user_path(@ride.user)
-
   end
 
 
